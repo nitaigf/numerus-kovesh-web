@@ -10,7 +10,7 @@ const OPENAPI_URL = `${API_BASE_URL}/?doc=openapi`;
 const REDOC_URL = `${API_BASE_URL}/?doc=redoc`;
 
 export default function App() {
-  const [text, setText] = createSignal("Nitai Embrás");
+  const [text, setText] = createSignal("Nitai Garcia Fernandes");
   const [result, setResult] = createSignal<NumerologyResponse | null>(null);
   const [loading, setLoading] = createSignal(false);
   const [error, setError] = createSignal<string | null>(null);
@@ -39,17 +39,14 @@ export default function App() {
 
       <section class="oracle-panel">
         <div class="intro-copy">
-          <p class="eyebrow">Numerologia pitagorica</p>
-          <h1>Converta nomes em simbolos numericos com uma leitura limpa e imediata.</h1>
-          <p class="lede">
-            O calculo normaliza o texto, mapeia cada letra, soma os valores e reduz o resultado ate um numero base ou mestre.
-          </p>
+          <h1>Numerus Kovesh</h1>
+          <p class="subtitle">API publica para calculo de numerologia pitagorica com FastAPI + SolidJS</p>
 
           <div class="docs-links" aria-label="Links da documentacao da API">
-            <a class="doc-link" href={OPENAPI_URL} target="_blank" rel="noreferrer">
+            <a class="doc-link-btn" href={OPENAPI_URL} target="_blank" rel="noreferrer">
               OpenAPI
             </a>
-            <a class="doc-link" href={REDOC_URL} target="_blank" rel="noreferrer">
+            <a class="doc-link-btn" href={REDOC_URL} target="_blank" rel="noreferrer">
               ReDoc
             </a>
           </div>

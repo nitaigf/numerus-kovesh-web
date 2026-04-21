@@ -14,7 +14,7 @@ export default function NumerologyForm(props: NumerologyFormProps) {
           rows="3"
           value={props.text}
           onInput={(event) => props.onTextChange(event.currentTarget.value)}
-          placeholder="Ex.: Nitai Embrás"
+          placeholder="Ex.: Nitai Garcia Fernandes"
           required
         />
       </label>

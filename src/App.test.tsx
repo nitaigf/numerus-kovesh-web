@@ -8,25 +8,32 @@ describe("App", () => {
       vi.fn().mockResolvedValue({
         ok: true,
         json: async () => ({
-          input: "Nitai Embrás",
-          normalized: "NITAIEMBRAS",
+          input: "Nitai Garcia Fernandes",
+          normalized: "NITAIGARCIAFERNANDES",
           letters: [
             { char: "N", value: 5 },
             { char: "I", value: 9 },
             { char: "T", value: 2 },
             { char: "A", value: 1 },
             { char: "I", value: 9 },
-            { char: "E", value: 5 },
-            { char: "M", value: 4 },
-            { char: "B", value: 2 },
-            { char: "R", value: 9 },
+            { char: "G", value: 7 },
             { char: "A", value: 1 },
+            { char: "R", value: 9 },
+            { char: "C", value: 3 },
+            { char: "I", value: 9 },
+            { char: "A", value: 1 },
+            { char: "F", value: 6 },
+            { char: "E", value: 5 },
+            { char: "R", value: 9 },
+            { char: "N", value: 5 },
+            { char: "D", value: 4 },
+            { char: "E", value: 5 },
             { char: "S", value: 1 }
           ],
-          sum: 48,
-          reduced: 3,
+          sum: 85,
+          reduced: 4,
           is_master: false,
-          meaning: "Comunicacao"
+          meaning: "Estrutura"
         }),
       }),
     );
@@ -44,10 +51,10 @@ describe("App", () => {
     fireEvent.submit(screen.getByRole("button", { name: "Calcular numerologia" }));
 
     await waitFor(() => {
-      expect(screen.getByText("Comunicacao")).toBeInTheDocument();
+      expect(screen.getByText("Estrutura")).toBeInTheDocument();
     });
 
-    expect(screen.getByText("NITAIEMBRAS")).toBeInTheDocument();
-    expect(screen.getByText("48")).toBeInTheDocument();
+    expect(screen.getByText("NITAIGARCIAFERNANDES")).toBeInTheDocument();
+    expect(screen.getByText("85")).toBeInTheDocument();
   });
 });
